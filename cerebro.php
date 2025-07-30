@@ -10,6 +10,7 @@
     <?php
     $con=mysqli_connect("localhost","root","","repertorio") or die ("erro!");
 
+    $id              = $_POST["id"];
     $titulo          = $_POST["titulo"];
     $artista         = $_POST["artista"];
     $album           = $_POST["album"];
@@ -22,20 +23,22 @@
     $caminho_arquivo = $_POST["caminho_arquivo"];
     $data_cadastro   = $_POST["data_cadastro"];
 
-    $in = "insert into musicas values(null,
-                                            '$titulo',
-                                            '$artista',
-                                            '$album',
-                                            '$genero',
-                                            '$ano_lancamento',
-                                            '$duracao',
-                                            '$gravadora',
-                                            '$compositor',
-                                            '$letra'
-                                            '$caminho_arquivo'
-                                            '$data_cadastro')";
+
+    $in = 'insert into musicas values(null,
+                                            "$titulo",
+                                            "$artista",
+                                            "$album",
+                                            "$genero",
+                                            "$ano_lancamento",
+                                            "$duracao",
+                                            "$gravadora",
+                                            "$compositor",
+                                            "$letra",
+                                            "$caminho_arquivo",
+                                            "$data_cadastro")';
 
 $incluir=mysqli_query($con,$in);
+
 
 if ($incluir == 1) {
     echo "
