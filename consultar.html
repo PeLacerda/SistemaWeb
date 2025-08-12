@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar</title>
+</head>
+<body>
+
+  <h1>Consultar</h1>
+
+  <form method="post" action="consultar.php">
+    Digite o que deseja consultar:
+    <input type="text" name="consulta" size="30">
+
+    <br><br>
+
+    <label for="procurar">Procurar</label>
+    <select name="op" id="procurar">
+      <option name="op" value="titulo">Titulo</option>
+      <option name="op" value="artista">Artista</option>
+      <option name="op" value="album">Album</option>
+      <option name="op" value="genero">Gênero</option>
+      <option name="op" value="ano_lancamento">Ano de Lançamento</option>
+      <option name="op" value="duracao">Duração</option>
+      <option name="op" value="gravadora">Gravadora</option>
+      <option name="op" value="compositor">Compositor</option>
+      <option name="op" value="letra">Letra</option>
+      <option name="op" value="caminho_arquivo">Caminho do Arquivo</option>
+      <option name="op" value="data_cadastro">Data de Cadastro</option>
+    </select>
+
+    <br><br>
+
+  </form>
+  
+  <input type="submit" class="botao">
+
+
+</body>
+</html>
