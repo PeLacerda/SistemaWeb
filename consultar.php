@@ -12,7 +12,7 @@ $duracao         = isset($_POST["duracao"])         ? mysqli_real_escape_string(
 $gravadora       = isset($_POST["gravadora"])       ? mysqli_real_escape_string($bd,$_POST["gravadora"]) : '';
 $compositor      = isset($_POST["compositor"])      ? mysqli_real_escape_string($bd,$_POST["compositor"]) : '';
 $ano_lancamento  = isset($_POST["ano_lancamento"])  ? mysqli_real_escape_string($bd, $_POST["ano_lancamento"]) : '';
-$letra           = isset($_POST["letra"])           ? mysqli_real_escape_string($bd, $_POST["letra"]) : '';
+$letra                     = isset($_POST["letra"])           ? mysqli_real_escape_string($bd, $_POST["letra"]) : '';
 $caminho_arquivo = isset($_POST["caminho_arquivo"]) ? mysqli_real_escape_string($bd, $_POST["caminho_arquivo"]) : '';
 $data_cadastro   = isset($_POST["data_cadastro"])   ? mysqli_real_escape_string($bd, $_POST["data_cadastro"]) : '';
 
@@ -65,6 +65,7 @@ exit;
 }
 
 while ($reg != 0) {
+$id              = $reg["id"];
 $titulo          = $reg["titulo"];
 $artista         = $reg["artista"];
 $album           = $reg["album"];
@@ -76,27 +77,29 @@ $compositor      = $reg["compositor"];
 $letra           = $reg["letra"];
 $caminho_arquivo = $reg["caminho_arquivo"];
 $data_cadastro   = $reg["data_cadastro"];
-echo "<h2>Resultado da pesquisa</h2>";
 
-echo "Título:           $titulo<br>
-Artista:                $artista<br>
-Álbum:                  $album<br>
-Gênero:                 $genero<br>
-Ano de Lançamento:      $ano<br>
-Duração (em segundos):  $duracao<br>
-Gravadora:              $gravadora<br>
-Compositor:             $compositor<br>
-Letra:                  $letra<br>
-Caminho do Arquivo:     $caminho_arquivo<br>;
-Data de Cadastro:     $data_cadastro<br>";
+echo "<a href='alterar.php?id=" . urlencode($reg['id']) . "'>Alterar</a> | ";
+echo "<a href='deletar.php?id=" . urlencode($reg['id']) . "'>Deletar</a><br><hr><br>";
+}
+// echo "<h2>Resultado da pesquisa</h2>";
 
+// echo "Título:           $titulo<br>
+// Artista:                $artista<br>
+// Álbum:                  $album<br>
+// Gênero:                 $genero<br>
+// Ano de Lançamento:      $ano<br>
+// Duração (em segundos):  $duracao<br>
+// Gravadora:              $gravadora<br>
+// Compositor:             $compositor<br>
+// Letra:                  $letra<br>
+// Caminho do Arquivo:     $caminho_arquivo<br>;
+// Data de Cadastro:     $data_cadastro<br>";
 
-echo "<br><br><a href='excluir.html'>Excluir música</a>";
-echo "<br><br><a href='alterar.html'>Alterar música</a>";
 
 $reg = mysqli_fetch_array($consulta);
-}
 ?>
+
 <br><a href="consultar.html">Voltar</a><br>
+
 </BODY>
 </HTML>
