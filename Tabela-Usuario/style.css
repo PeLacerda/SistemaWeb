@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-image: url(/Tabela-Usuario/imgs/purple-back.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-incluir {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 3%;
+  border-radius: 10px;
+  color: white;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+}
+
+.form-incluir input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+

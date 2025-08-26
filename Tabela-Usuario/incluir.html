@@ -5,9 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Inclusão</title>
 </head>
 <body>
+
+<div class="container">
+  <div class="form-incluir">
+    <form method="post" action="incluir.php">
+
+      <h3 class="titulo-incluir">Incluir</h3>
+
+                          <input type="hidden" name="id">
+Nome:                 <input type="text"           name="nome"  size="30"><br>
+E-mail:                <input type="email"         name="email"  size="30"><br>
+Telefone:             <input type="tel"            name="fone"    size="30"><br>
+Senha:                <input type="password"  name="senha"  size="30"><br>
+Foto:                   <input type="file"           name="foto"     size="30"><br>
+<input type="submit" value="Enviar" class="botao-incluir">
+
+    </form>
+  </div>
+</div>
 
 </body>
 </html>
