@@ -1,0 +1,74 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <!-- CSS -->
+    <style>
+        html, body
+        {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #ccc;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .titulo-01
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        form
+        {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: inset black 10px;
+            
+        }
+        input, select, textarea
+        {
+            margin-left: 0px;
+            float:right;
+            z-index: 1;
+        }
+
+        .botao {
+            margin-top: 20px;
+            display: flex;
+            margin-right: 40%;
+            padding: 10px;
+            border-radius: 15px;
+            border-width: 0;
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+
+    <!-- HTML -->
+    <form method="post" action="cerebro.php">
+    
+    <h3 class="titulo-01">Spotyfire</h3>
+
+                                 <input type="hidden" name="id">                                           <br><br>
+        Titulo:                  <input type="text" name="titulo" size="30">                               <br><br>
+        Artista:                 <input type="text" name="artista" size="30">                              <br><br>
+        Album:                   <input type="text" name="album" size="30">                                <br><br>
+        Genero:                  <input type="text" name="genero" size="30">                               <br><br>
+        Ano de lançamento:       <input type="date" name="ano_lancamento" >                                <br><br>
+        Duração:                 <input type="time" name="duracao">                                        <br><br>
+        Gravadora                <input type="text" name="gravadora" size="30">                            <br><br>
+        Compositor:              <input type="text" name="compositor" size="30">                           <br><br>
+        Letra:                   <textarea name="letra" cols="33" rows="5"></textarea>                     <br><br><br><br></br></br>
+        Caminho do arquivo:      <input type="text" id="file" name="caminho_arquivo">                      <br><br>
+        Data de Cadastro:        <input type="date" name="data_cadastro">                                  <br><br>                            
+        <input type="submit" class="botao">
+    </form>
+</body>
+</html>
+
